@@ -13,6 +13,11 @@ This is a python package that provides a simple data validation module that vali
 * Regular Expression (RegEx)
 * Python Packages and Modules
 
+## Installation
+```
+pip install -i https://test.pypi.org/simple/ datavalidator-Mr-Lit==0.1
+```
+
 ## Use Case
 ```python
 from DataValidator.Validator import DataValidator
@@ -26,5 +31,7 @@ validator.validate_phone_number("+2348162057433")
 validator.validate_date("14-03-2025")
 validator.validate_url("https://discord.com")
 ```
+## MTI Licensed
+
 ## Available on Pypi
 

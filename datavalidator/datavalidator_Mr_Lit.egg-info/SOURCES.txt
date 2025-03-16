@@ -1,0 +1,5 @@
+setup.py
+datavalidator_Mr_Lit.egg-info/PKG-INFO
+datavalidator_Mr_Lit.egg-info/SOURCES.txt
+datavalidator_Mr_Lit.egg-info/dependency_links.txt
+datavalidator_Mr_Lit.egg-info/top_level.txt
