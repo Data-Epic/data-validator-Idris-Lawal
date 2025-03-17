@@ -5,7 +5,7 @@ from datetime import datetime
 # Create the data validator class
 class DataValidator:
     """
-    defines the class validator class
+    defines the data validator class
 
     Methods:
         validate_email - validates email format
