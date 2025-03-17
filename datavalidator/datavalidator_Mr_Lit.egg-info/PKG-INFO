@@ -1,9 +1,0 @@
-Metadata-Version: 2.2
-Name: datavalidator-Mr_Lit
-Version: 0.1
-Summary: A simple data validation package
-Author: Lawal Idris T.
-Author-email: olatomiwal679@gmail.com
-Dynamic: author
-Dynamic: author-email
-Dynamic: summary
