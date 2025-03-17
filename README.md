@@ -15,12 +15,12 @@ This is a python package that provides a simple data validation module that vali
 
 ## Installation
 ```
-pip install -i https://test.pypi.org/simple/ datavalidator-Mr-Lit==0.1
+pip install -i https://test.pypi.org/simple/ Validators
 ```
 
 ## Use Case
 ```python
-from DataValidator.Validator import DataValidator
+from Validators.Validator import DataValidator
 
 # Initiate validator
 validator = DataValidator()

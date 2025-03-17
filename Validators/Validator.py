@@ -26,11 +26,11 @@ class DataValidator:
         self.email = email
         pattern = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$' #sets standard email format
         if verbose:
-            if re.fullmatch(pattern, self.email): #checks if the given email comforms with the set standard
+            if re.fullmatch(pattern, email): #checks if the given email comforms with the set standard
                 print("Email is valid")
             else:
                 print("Invalid Email!")
-        return True
+        return bool(re.fullmatch(pattern, email))
 
     def validate_phone_number(self, number, verbose=False):
         """
@@ -45,11 +45,11 @@ class DataValidator:
         self.number = number
         pattern = r'^\+?[0-9]\d{0,14}$' #sets standard phone number format
         if verbose:
-            if re.fullmatch(pattern, self.number): #checks if the given phone number comforms with the set standard
+            if re.fullmatch(pattern, number): #checks if the given phone number comforms with the set standard
                 print("Phone Number is Valid!")
             else:
                 print("Invalid Phone Number!")
-        return True
+        return bool(re.fullmatch(pattern, number))
 
     def validate_date(self, date, verbose=False):
         """
@@ -64,12 +64,12 @@ class DataValidator:
         self.date = date
         pattern = r"^(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])-[1-9][0-9]{3}$" #sets standard date format
         if verbose:
-            if re.fullmatch(pattern, self.date):    #checks if the given date comforms with the set standard
-                datetime.strptime(self.date, "%m-%d-%Y")
+            if re.fullmatch(pattern, date):    #checks if the given date comforms with the set standard
+                datetime.strptime(date, "%m-%d-%Y")
                 print("Date is Valid")
             else:
                 print("Date is Invalid")
-        return True
+        return bool(re.fullmatch(pattern, date))
 
     def validate_url(self, url, verbose= True):
         """
@@ -87,8 +87,8 @@ class DataValidator:
         pattern2 = r"^[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$"
                         # sets standard url format without "https://" inititalization
         if verbose:
-            if re.fullmatch(pattern1, self.url) or re.fullmatch(pattern2, self.url): #checks if the given url comforms with either of the set standards
+            if re.fullmatch(pattern1, url) or re.fullmatch(pattern2, self.url): #checks if the given url comforms with either of the set standards
                 print("url is Valid!")
             else:
                 print("Invalid url")
-        return True
+        return bool(re.fullmatch(pattern1, url) or re.fullmatch(pattern2, url))
